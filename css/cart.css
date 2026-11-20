@@ -1,0 +1,495 @@
+/* ==============================================================
+   Dress Point - Cart, Checkout & Demo Payment Stylesheet
+   Pure Custom CSS3 (Vanilla)
+   Theme: Luxury Burgundy, Blush, Cream, Dusty Rose & Soft Gold
+   ============================================================== */
+
+/* --- Cart Page Layout --- */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 36px;
+  align-items: start;
+}
+
+.cart-table-wrap {
+  background: var(--white);
+  border: 1px solid var(--dusty-rose);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th {
+  background-color: var(--burgundy);
+  color: var(--white);
+  font-family: var(--font-heading);
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.cart-table td {
+  padding: 18px;
+  border-bottom: 1px solid var(--dusty-rose-soft);
+  vertical-align: middle;
+}
+
+.cart-table tr:last-child td {
+  border-bottom: none;
+}
+
+.cart-item-cell {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-item-img {
+  width: 65px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--dusty-rose);
+  flex-shrink: 0;
+  filter: saturate(0.85) sepia(0.12);
+  transition: var(--transition);
+}
+
+.cart-item-img:hover {
+  filter: none;
+}
+
+.cart-item-info h4 {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-bottom: 4px;
+}
+
+.cart-item-size {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.cart-item-size b {
+  color: var(--burgundy);
+}
+
+.cart-item-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.cart-item-subtotal {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+}
+
+.cart-remove-btn {
+  background: none;
+  border: none;
+  color: #DC2626;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.cart-remove-btn:hover {
+  background: #FEE2E2;
+}
+
+/* Order Summary Box */
+.order-summary-box {
+  background: var(--white);
+  border: 1px solid var(--dusty-rose);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 90px;
+}
+
+.summary-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.summary-row.total-row {
+  border-top: 1px solid var(--dusty-rose-soft);
+  padding-top: 14px;
+  margin-top: 14px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--burgundy);
+}
+
+.summary-row.total-row span:last-child {
+  color: var(--gold-dark);
+  font-weight: 800;
+}
+
+/* --- Checkout Layout --- */
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 36px;
+  align-items: start;
+}
+
+.checkout-box {
+  background: var(--white);
+  border: 1px solid var(--dusty-rose);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.checkout-box-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkout-box-title .step-num {
+  background: var(--burgundy);
+  color: var(--gold-light);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Form Controls */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-bottom: 6px;
+}
+
+.form-control {
+  padding: 10px 14px;
+  border: 1px solid var(--dusty-rose);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  outline: none;
+  background: var(--cream);
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(201, 162, 122, 0.25);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Payment Method Selection Pills */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.payment-radio-label {
+  display: block;
+  cursor: pointer;
+}
+
+.payment-radio-label input {
+  display: none;
+}
+
+.payment-pill {
+  border: 2px solid var(--dusty-rose);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  text-align: center;
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.payment-pill-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-bottom: 4px;
+}
+
+.payment-pill-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.payment-radio-label input:checked + .payment-pill {
+  border-color: var(--gold);
+  background: var(--blush);
+}
+
+.payment-radio-label input:checked + .payment-pill .payment-pill-title {
+  color: var(--burgundy);
+}
+
+/* --- Demo Credit Card UI --- */
+.demo-card-container {
+  display: none; /* Controlled by JS when Demo Card radio is chosen */
+  background: var(--cream);
+  border: 1px dashed var(--gold);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-top: 18px;
+}
+
+.demo-card-container.active {
+  display: block;
+}
+
+/* Virtual Card Visual Display - Luxury Burgundy & Gold Foil */
+.card-visual {
+  background: linear-gradient(135deg, #4A1523 0%, #2E0E16 100%);
+  border: 1px solid var(--gold);
+  color: var(--white);
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto 20px;
+  aspect-ratio: 1.58 / 1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 16px 36px rgba(46, 14, 22, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-visual::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(201, 162, 122, 0.35) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.card-visual-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-chip {
+  width: 38px;
+  height: 28px;
+  background: var(--gold-gradient);
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.card-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--gold-light);
+}
+
+.card-visual-number {
+  font-family: monospace;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.card-visual-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #F6E3DC;
+}
+
+.card-holder-name {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+
+.demo-notice {
+  font-size: 0.78rem;
+  background: rgba(201, 162, 122, 0.18);
+  border-left: 3px solid var(--gold);
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-sm);
+  color: var(--burgundy);
+  font-weight: 500;
+}
+
+/* --- Order Success / Invoice Page --- */
+.success-invoice-box {
+  background: var(--white);
+  border: 1px solid var(--dusty-rose);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 780px;
+  margin: 30px auto;
+}
+
+.success-badge-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #16A34A;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.success-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-bottom: 6px;
+}
+
+.order-id-highlight {
+  display: inline-block;
+  background: var(--blush);
+  border: 1px dashed var(--gold);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-family: monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-top: 10px;
+}
+
+.invoice-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid var(--dusty-rose-soft);
+  border-bottom: 1px solid var(--dusty-rose-soft);
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+}
+
+.invoice-meta-item b {
+  color: var(--burgundy);
+  display: block;
+  margin-bottom: 3px;
+  font-family: var(--font-heading);
+}
+
+.invoice-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.invoice-items-table th {
+  background: var(--cream);
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--burgundy);
+  font-family: var(--font-heading);
+}
+
+.invoice-items-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--dusty-rose-soft);
+  font-size: 0.9rem;
+}
+
+.invoice-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 860px) {
+  .cart-layout, .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+  }
+}
